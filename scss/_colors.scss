@@ -1,0 +1,70 @@
+$success_color: rgb(54, 185, 126);
+$light_success_color: rgb(170, 245, 183);
+$warning_color: rgb(224, 132, 56);
+$light_warning_color: rgb(245, 178, 133);
+$error_color: rgb(236, 71, 104);
+$light_error_color: rgb(247, 164, 180);
+$dark_color: rgb(44, 43, 43);
+$light_color: rgb(201, 201, 201);
+$info_color: rgb(6, 102, 180);
+
+.bg-success{
+    background-color: $success_color;
+}
+
+.bg-light-succes{
+    background-color: $light_success_color;
+}
+
+.bg-warning{
+    background-color: $warning_color;
+}
+
+.bg-light-warning{
+    background-color: $light_warning_color;
+}
+
+.bg-error{
+    background-color: $error_color;
+}
+
+.bg-light-error{
+    background-color: $light_error_color;
+}
+
+.bg-light{
+    background-color: $light_color;
+}
+
+.bg-dark{
+    background-color: $dark_color;
+}
+
+.bg-info{
+    background-color: $info_color;
+}
+
+.text-success{
+    color: $success_color;
+}
+
+.text-warning{
+    color: $warning_color;
+}
+
+.text-error{
+    color: $error_color;
+}
+
+.text-light{
+    color: $light_color;
+}
+
+.text-dark{
+    color: $dark_color;
+}
+
+.text-info{
+    color: $info_color;
+}
+

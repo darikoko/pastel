@@ -1,17 +1,26 @@
 {
-  "name": "pastel",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "pastel2",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "zinzin": "pwd",
-    "scss": "live-server --port=7777 & node-sass -w scss -o css"
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start"
   },
-  "author": "",
-  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.14.54",
+    "postcss": "^8.4.21",
+    "solid-start-node": "^0.2.19",
+    "vite": "^4.1.4"
+  },
   "dependencies": {
-    "live-server": "^1.2.2",
-    "node-sass": "^8.0.0"
+    "@solidjs/meta": "^0.28.2",
+    "@solidjs/router": "^0.8.2",
+    "solid-js": "^1.7.2",
+    "solid-start": "^0.2.26",
+    "stylus": "^0.59.0",
+    "undici": "^5.15.1"
+  },
+  "engines": {
+    "node": ">=16.8"
   }
 }

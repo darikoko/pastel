@@ -1,0 +1,45 @@
+@require 'typo';
+
+.carre{
+  background-color: blue;
+  width: 80px;
+  height: 40px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  }
+
+  $direction = {
+    'r': right,
+    'l': left,
+    'b': bottom,
+    't': top
+  }
+
+for num in 1..12{
+
+  for letter in $direction {
+    .m{letter}-{num}{
+        margin-{$direction[letter]}: $base * ($selected_ratio ** num);
+      }
+
+      .p{letter}-{num}{
+        padding-{$direction[letter]}: $base * ($selected_ratio ** num) ;
+        }
+  }
+
+    .w-{num}{
+        width: $base * ($selected_ratio ** num);
+      }
+
+    .h-{num}{
+        height: $base * ($selected_ratio ** num);
+      }
+}
+
+.mr-1{
+  margin-right: $base * $selected_ratio;
+  }
+

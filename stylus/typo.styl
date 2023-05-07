@@ -1,0 +1,111 @@
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+
+    }
+
+html {
+  background-color: white;
+  }
+
+
+$font_title = Bagerich;
+$font_corpus = Portrait;
+
+@font-face {
+ font-family: $font_title;
+ src:url(/fonts/bagerich.otf) format("truetype");
+ font-weight:400;
+ font-style:normal
+}
+
+@font-face {
+ font-family: $font_corpus;
+ src:url(/fonts/portrait.woff) format("opentype");
+ font-weight:400;
+ font-style:normal
+}
+
+$base = 1.3rem;
+
+$minor_second = 1.067;
+$major_second = 1.125;
+$minor_third = 1.200;
+$major_third = 1.250;
+$perfect_fourth = 1.333;
+$augmented_fourth = 1.414;
+$perfect_fifth = 1.500;
+$golden_ratio = 1.618;
+
+$selected_ratio = $augmented_fourth;
+
+fn_compute_scale(base, ratio, num){
+  (base * (ratio ** (5 - (num - 1) ) ) );
+}
+
+$body_width = 800px;
+
+.container{
+  width: $body_width;
+
+  }
+
+for num in 1..5{
+  h{num}{
+      font-size: fn_compute_scale($base, $selected_ratio, num) rem;
+    }
+  
+
+
+    h{num} + p {
+      margin-top: (fn_compute_scale($base, $selected_ratio, num) / 2 ) rem;
+    }
+
+    p + h{num} {
+      margin-top: (fn_compute_scale($base, $selected_ratio, num) / 2 ) rem;
+      }
+
+      * + h{num} {
+        margin-top: (fn_compute_scale($base, $selected_ratio, num) / 2 ) rem;
+        }
+
+    p + p {
+      margin-top: $base rem;
+      }
+}
+
+img {
+  width: 100%;
+  margin-top: $base rem;
+  }
+
+img + p {
+  margin-top: $base rem;
+  }
+
+ul {
+  list-style: inside;
+  }
+
+p + * {
+  margin-top: $base;
+  }
+
+li{
+  padding-left: $base;
+  }
+
+p,ul,li,ol,a,b,span,strong,em {
+  line-height: $base * $selected_ratio;
+  font-family: $font_corpus;
+  font-size: $base;
+  color:  rgb(51, 51, 51);
+  }
+
+h1, h2, h3, h4, h5{
+  font-family: $font_title;
+  color: rgb(13, 13, 13);
+  font-weight: normal;
+  }

@@ -1,0 +1,34 @@
+$gap = 1rem;
+
+.success{
+  background:green;
+  padding: 1rem;
+  border-radius: 3px;
+  }
+
+.columns{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: - $gap;
+  margin-right: @margin-left;
+ }
+
+.column{
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $gap;
+ }
+
+ for num in 2..12{
+
+    for item in 1..num{
+      .column-{item}-{num}{
+          width: (100 * item / num)%;
+          display: block;
+          flex:none;
+          padding: $gap;
+        }
+    }
+ } 

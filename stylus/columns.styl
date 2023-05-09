@@ -1,3 +1,5 @@
+@require 'breakpoints';
+
 $gap = 1rem;
 
 .success{
@@ -24,7 +26,7 @@ $gap = 1rem;
  for num in 2..12{
 
     for item in 1..num{
-      .column-{item}-{num}{
+      .column-{item}\\/{num}{
           width: (100 * item / num)%;
           display: block;
           flex:none;
@@ -32,3 +34,16 @@ $gap = 1rem;
         }
     }
  } 
+
+
+ for breakpoint in $breakpoints {
+  for num in 2..12{
+    for item in 1..num{
+      .{breakpoint}\\:column-{item}\\/{num}{
+          @media (min-width: $breakpoints[breakpoint]) {
+            width: (100 * item / num)% ;
+          }
+        }
+    }
+  } 
+ }

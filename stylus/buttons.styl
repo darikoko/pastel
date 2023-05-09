@@ -1,0 +1,13 @@
+@require 'typo';
+
+$zozo = blue;
+
+.button{
+  --my-css-var: $zozo; 
+  --xxl: 25px;
+  color:white;
+  background: var(--my-css-var);
+  font-size: var(--xxl);
+  border: none;
+  padding: ($base * $selected_ratio / 4) rem;
+  }

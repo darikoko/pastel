@@ -1,4 +1,6 @@
 @require 'typo';
+@require 'breakpoints';
+
 
 .carre{
   background-color: blue;
@@ -22,24 +24,36 @@ for num in 1..12{
 
   for letter in $direction {
     .m{letter}-{num}{
-        margin-{$direction[letter]}: $base * ($selected_ratio ** num);
+        margin-{$direction[letter]}: $base * ($selected_ratio ** num) rem;
       }
 
       .p{letter}-{num}{
-        padding-{$direction[letter]}: $base * ($selected_ratio ** num) ;
+        padding-{$direction[letter]}: $base * ($selected_ratio ** num) rem ;
         }
   }
 
     .w-{num}{
-        width: $base * ($selected_ratio ** num);
+        width: $base * ($selected_ratio ** num)rem;
       }
 
+    for breakpoint in $breakpoints{
+      .{breakpoint}\\:w-{num}{
+          @media (min-width: $breakpoints[breakpoint]) {
+           width:$base * ($selected_ratio ** num)rem !important;
+          }
+        }
+    }
+
     .h-{num}{
-        height: $base * ($selected_ratio ** num);
+        height: $base * ($selected_ratio ** num)rem;
       }
 }
 
-.mr-1{
-  margin-right: $base * $selected_ratio;
-  }
+for breakpoint in $breakpoints{
+
+  .w-{breakpoint}{
+    width: $breakpoints[breakpoint];
+    }
+} 
+
 

@@ -1,0 +1,41 @@
+.flex{
+  display: flex;
+  }
+
+.flex-demo{
+  width: 400px;
+  height: 200px;
+  background-color: rgba(0, 0, 255, 0.2);
+  margin-top: 15px;
+  }
+
+ $justify_positions = {
+    'normal': normal,
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'between': space-between,
+    'around': space-around,
+    'evenly': space-evenly,
+    'stretch': stretch,
+  }
+
+$align_positions = {
+    'center': center,
+    'start': flex-start,
+    'end': flex-end,
+    'baseline': baseline,
+    'stretch': stretch,
+  }
+
+for pos in $justify_positions {
+  .justify-{pos} {
+      justify-content: $justify_positions[pos];
+    }
+}
+
+for pos in $align_positions {
+  .items-{pos} {
+      align-items: $align_positions[pos];
+    }
+}

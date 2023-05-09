@@ -1,0 +1,96 @@
+$radius_value= 2px 4px 6px 8px 12px 16px 20px 24px 30px;
+
+.border-radius-full{
+    border-radius: 100%;    
+}
+
+for value, index in $radius_value{
+    .border-radius-{index}{
+        border-radius: value;    
+    }    
+
+    .border-radius-top-right-{index}{
+        border-radius: 0 value 0 0;
+    }
+
+    .border-radius-top-left-{index}{
+        border-radius: value 0 0 0;
+    }
+    
+    .border-radius-bottom-left-{index}{
+        border-radius: 0 0 0 value;
+    }
+
+    .border-radius-bottom-right-{index}{
+        border-radius: 0 0 value 0;
+    }
+
+    .border-radius-right-{index}{
+        border-radius: 0 value value 0;
+    }
+
+    .border-radius-left-{index}{
+        border-radius: value 0 0 value;
+    }
+
+    .border-radius-top-{index}{
+        border-radius: value value 0 0;
+    }
+
+    .border-radius-bottom-{index}{
+        border-radius: 0 0 value value;
+    }
+}
+
+.test{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    margin: 70px;
+}
+
+
+.inner-shadow-1{
+    box-shadow: inset rgba(0, 0, 0, 0.5) 2px 2px 5px 1px ;
+}
+
+.inner-shadow-2{
+    box-shadow: inset rgba(0, 0, 0, 0.5) 4px 4px 7px 1px ;
+}
+
+.inner-shadow-3{
+    box-shadow: inset rgba(0, 0, 0, 0.6sw) 5px 6px 9px 1px ;
+}
+
+.inner-shadow-4{
+    box-shadow: inset rgba(0, 0, 0, 0.6) 5px 6px 12px 2px;
+}
+
+
+
+.shadow-1{
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px 1px ;
+}
+
+.shadow-2{
+    box-shadow: rgba(0, 0, 0, 0.5) 0 7px 7px 1px ;
+}
+
+.shadow-3{
+    box-shadow: rgba(0, 0, 0, 0.6sw) 0 10px 9px 1px ;
+}
+
+.shadow-4{
+    box-shadow: rgba(0, 0, 0, 0.6) 0 15px 12px 2px;
+}
+
+.shadow-5{
+    box-shadow: rgba(0, 0, 0, 0.7) 0 20px 17px 3px ;
+}
+
+.shadow-6{
+    box-shadow: rgba(0, 0, 0, 0.8) 0 30px 20px 3px ;
+}
+
+
+

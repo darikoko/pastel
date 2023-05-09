@@ -13,4 +13,46 @@ for color,index in $colors{
 .tache{
   width: 80px;
   height: 80px;
+}
+
+$main_color = rgb(98, 114, 38);
+$second_color = rgb(16, 101, 112);
+$third_color = rgb(98, 114, 38);
+$fourth_color = rgb(98, 114, 38);
+$fith_color = rgb(98, 114, 38);
+
+$color-list = $main_color $second_color $third_color $fourth_color $fith_color;
+
+
+for color, value in $color-list{
+  
+  .bg-color-{index+1}{
+    background-color: color;
   }
+
+  .color-{index+1}{
+    color: color;
+  }
+
+  for index in range(0,5){
+    $prod_color= spin(color, (index+1)*(-20deg));
+    $complementary= complement(color);
+
+    .bg-color-{value+1}-dark-{index+1}{
+      background-color: shade(color, (index+1)*(10%));
+    }
+    
+    .bg-color-{value+1}-light-{index+1}{
+      background-color: tint(color, (index+1)*(10%))
+    }
+
+    .color-{value+1}-dark-{index+1}{
+      color: shade(color, (index+1)*(10%));
+    }
+
+    .color-{value+1}-light-{index+1}{
+      color: tint(color, (index+1)*(10%));
+    }
+
+  }
+}

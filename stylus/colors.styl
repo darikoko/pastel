@@ -22,24 +22,24 @@ for color, value in $color-list{
     color: color;
   }
 
-  for index in range(0,5){
+  for index in range(0,10){
     $prod_color= spin(color, (index+1)*(-20deg));
     $complementary= complement(color);
 
     .bg-color-{value+1}-dark-{index+1}{
-      background-color: shade(color, (index+1)*(10%));
+      background-color: shade(color, (index+1)*(5%));
     }
     
     .bg-color-{value+1}-light-{index+1}{
-      background-color: tint(color, (index+1)*(10%))
+      background-color: tint(color, (index+1)*(5%))
     }
 
     .color-{value+1}-dark-{index+1}{
-      color: shade(color, (index+1)*(10%));
+      color: shade(color, (index+1)*(5%));
     }
 
     .color-{value+1}-light-{index+1}{
-      color: tint(color, (index+1)*(10%));
+      color: tint(color, (index+1)*(5%));
     }
 
   }

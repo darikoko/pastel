@@ -1,0 +1,33 @@
+@require 'typo';
+
+$direction = {
+    'r': right,
+    'l': left,
+    'b': bottom,
+    't': top
+}
+
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.fixed{
+    position: fixed;
+}
+
+
+
+for num in 1..10{
+
+    for letter in $direction {
+        .{letter}-{num}{
+            {$direction[letter]}: $base * ($selected_ratio ** num) rem;
+        }
+
+    }
+
+}
